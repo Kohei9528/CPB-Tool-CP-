@@ -1,0 +1,40 @@
+body{
+  font-family: -apple-system;
+  background:#f2f2f7;
+  padding:16px;
+}
+
+.tabs{
+  display:flex;
+  gap:6px;
+}
+
+.tab{
+  flex:1;
+  background:#ddd;
+  padding:10px;
+  text-align:center;
+  border-radius:8px;
+}
+
+.section{
+  display:none;
+  margin-top:12px;
+}
+
+.section.active{
+  display:block;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  margin:6px 0;
+}
+
+input{
+  flex:1;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
