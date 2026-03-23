@@ -17,79 +17,94 @@
   <div class="tab" onclick="showTab('cp')">CP</div>
 </div>
 
-<!-- ===== BASIC ===== -->
+<!-- ===== Patient ===== -->
 <div id="basic" class="section active">
 
-  <h3>Patient Info</h3>
+<h3>Patient</h3>
 
-  <div class="row">
-    <input id="height" placeholder="Height cm" oninput="calcAll()">
-    <input id="weight" placeholder="Weight kg" oninput="calcAll()">
-  </div>
+<div class="row">
+<input id="height" placeholder="Height cm" oninput="calcAll()">
+<input id="weight" placeholder="Weight kg" oninput="calcAll()">
+</div>
 
-  <div class="row">
-    <input id="hb" placeholder="Hb" oninput="calcAll()">
-    <input id="alb" placeholder="Alb" oninput="calcAll()">
-  </div>
+<div class="row">
+<input id="hb" placeholder="Hb" oninput="calcAll()">
+<input id="alb" placeholder="Alb" oninput="calcAll()">
+</div>
 
-  <div class="row">
-    <input id="prime" placeholder="Prime mL" oninput="calcAll()">
-    <input id="transfusion_u" placeholder="RBC U" oninput="calcAll()">
-  </div>
+<div class="row">
+<input id="prime" placeholder="Prime mL" oninput="calcAll()">
+<input id="transfusion_u" placeholder="RBC U" oninput="calcAll()">
+</div>
 
-  <h3>Result</h3>
-  <div id="bsa">BSA: --</div>
-  <div id="dilution">Dilution: --</div>
+<h4>Result</h4>
+<div id="bsa">BSA: --</div>
+<div id="hbDil">Hb: --</div>
+<div id="albDil">Alb: --</div>
+<div id="dilution">Dilution: --</div>
 
 </div>
 
-<!-- ===== CLINICAL ===== -->
+<!-- ===== Perfusion ===== -->
 <div id="clinical" class="section">
 
-  <h3>Perfusion</h3>
+<h3>Perfusion</h3>
 
-  <div class="row">
-    <input id="hb_now" value="7.5">
-    <input id="ci_now" value="2.4">
-  </div>
+<div class="row">
+<input id="hb_now" value="7.5" oninput="calcAll()">
+<input id="ci_now" value="2.4" oninput="calcAll()">
+</div>
 
-  <div id="flow">Flow: --</div>
-  <div id="do2">DO2: --</div>
+<div id="flow">Flow: --</div>
+<div id="do2">DO2: --</div>
+<div id="do2i">DO2i: --</div>
+
+<h4>Adjustment</h4>
+
+<div class="row">
+<input id="target_hb" value="9" oninput="calcAll()">
+<div id="rbc">RBC: --</div>
+</div>
+
+<div class="row">
+<input id="target_sbe" value="0" oninput="calcAll()">
+<div id="meylon">Meylon: --</div>
+</div>
 
 </div>
 
 <!-- ===== CP ===== -->
 <div id="cp" class="section">
 
-  <h3>Cardioplegia</h3>
+<h3>Cardioplegia</h3>
 
-  <label>
-    <input type="checkbox" id="cp_ratio" onchange="calcAll()"> ×1.5
-  </label>
+<label>
+<input type="checkbox" id="cp_ratio" onchange="calcAll()"> ×1.5
+</label>
 
-  <h4>Initial</h4>
-  <div class="row">
-    <input id="cp_init" readonly>
-    <input id="k1" placeholder="K" oninput="calcAll()">
-  </div>
-  <div id="kPred1">--</div>
+<h4>Initial</h4>
+<div class="row">
+<input id="cp_init" readonly>
+<input id="k1" placeholder="K" oninput="calcAll()">
+</div>
+<div id="kPred1">--</div>
 
-  <h4>Continuous</h4>
-  <div class="row">
-    <input id="cp_cont" readonly>
-    <input id="k2" placeholder="K" oninput="calcAll()">
-  </div>
-  <div id="kPred2">--</div>
+<h4>Continuous</h4>
+<div class="row">
+<input id="cp_cont" readonly>
+<input id="k2" placeholder="K" oninput="calcAll()">
+</div>
+<div id="kPred2">--</div>
 
-  <h4>Hotshot</h4>
-  <div class="row">
-    <input value="600" readonly>
-    <input id="k3" placeholder="K" oninput="calcAll()">
-  </div>
-  <div id="kPred3">--</div>
+<h4>Hotshot</h4>
+<div class="row">
+<input value="600" readonly>
+<input id="k3" placeholder="K" oninput="calcAll()">
+</div>
+<div id="kPred3">--</div>
 
-  <hr>
-  <div id="totalK">Total K: --</div>
+<hr>
+<div id="totalK">Total K: --</div>
 
 </div>
 
