@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPB Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>CPB Tool</h2>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('basic')">Patient</div>
+  <div class="tab" onclick="showTab('clinical')">Perfusion</div>
+  <div class="tab" onclick="showTab('cp')">CP</div>
+</div>
+
+<!-- ===== BASIC ===== -->
+<div id="basic" class="section active">
+
+  <h3>Patient Info</h3>
+
+  <div class="row">
+    <input id="height" placeholder="Height cm" oninput="calcAll()">
+    <input id="weight" placeholder="Weight kg" oninput="calcAll()">
+  </div>
+
+  <div class="row">
+    <input id="hb" placeholder="Hb" oninput="calcAll()">
+    <input id="alb" placeholder="Alb" oninput="calcAll()">
+  </div>
+
+  <div class="row">
+    <input id="prime" placeholder="Prime mL" oninput="calcAll()">
+    <input id="transfusion_u" placeholder="RBC U" oninput="calcAll()">
+  </div>
+
+  <h3>Result</h3>
+  <div id="bsa">BSA: --</div>
+  <div id="dilution">Dilution: --</div>
+
+</div>
+
+<!-- ===== CLINICAL ===== -->
+<div id="clinical" class="section">
+
+  <h3>Perfusion</h3>
+
+  <div class="row">
+    <input id="hb_now" value="7.5">
+    <input id="ci_now" value="2.4">
+  </div>
+
+  <div id="flow">Flow: --</div>
+  <div id="do2">DO2: --</div>
+
+</div>
+
+<!-- ===== CP ===== -->
+<div id="cp" class="section">
+
+  <h3>Cardioplegia</h3>
+
+  <label>
+    <input type="checkbox" id="cp_ratio" onchange="calcAll()"> ×1.5
+  </label>
+
+  <h4>Initial</h4>
+  <div class="row">
+    <input id="cp_init" readonly>
+    <input id="k1" placeholder="K" oninput="calcAll()">
+  </div>
+  <div id="kPred1">--</div>
+
+  <h4>Continuous</h4>
+  <div class="row">
+    <input id="cp_cont" readonly>
+    <input id="k2" placeholder="K" oninput="calcAll()">
+  </div>
+  <div id="kPred2">--</div>
+
+  <h4>Hotshot</h4>
+  <div class="row">
+    <input value="600" readonly>
+    <input id="k3" placeholder="K" oninput="calcAll()">
+  </div>
+  <div id="kPred3">--</div>
+
+  <hr>
+  <div id="totalK">Total K: --</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
