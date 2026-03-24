@@ -41,8 +41,8 @@ body{
 .row{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-bottom:10px;
+  gap:8px;
+  width:100%;
 }
 
 input{
@@ -62,4 +62,22 @@ h3,h4{
 div{
   text-align:center;
   margin:4px 0;
+}
+
+html, body {
+  width:100%;
+  overflow-x:hidden;
+}
+
+.row{
+  width:100%;
+}
+
+.cdi{
+  width:100%;
+}
+
+input{
+  width:100%;
+  max-width:100%;
 }
